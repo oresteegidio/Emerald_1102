@@ -1,0 +1,141 @@
+{
+  "id": "90e6e853-4523-4bda-8fc9-7c5b99f60f1c",
+  "version": "2.0",
+  "name": "Prj_Selenium",
+  "url": "http://commerce-preview.sbx0187.play.hclsofy.com",
+  "tests": [{
+    "id": "bc33c3bd-7e7a-4130-af76-7a83c2d3c889",
+    "name": "Chair",
+    "commands": [{
+      "id": "b55e87dc-79a3-4242-aa28-169174f44fa2",
+      "comment": "",
+      "command": "open",
+      "target": "/Emerald",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "233e94e3-c17b-401a-91b1-bb6bfb299ac2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1499x862",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ee190b5-9426-4485-b203-384615d54a9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-eeDRCY:nth-child(5) .sc-bmzYkS",
+      "targets": [
+        ["css=.sc-eeDRCY:nth-child(5) .sc-bmzYkS", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/header/div[2]/div/div/div[5]/button/p", "xpath:idRelative"],
+        ["xpath=//div[5]/button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Dining Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d69447ef-0661-44d1-a031-5911b8f47cec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-eeDRCY:nth-child(2) > .sc-jxOSlx > .sc-bmzYkS",
+      "targets": [
+        ["css=.sc-eeDRCY:nth-child(2) > .sc-jxOSlx > .sc-bmzYkS", "css:finder"],
+        ["xpath=//div[@id='MENU_POPPER_10505']/div/div/div/div/div[2]/a/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Chairs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29db4604-fcd4-427c-8738-adff72526a13",
+      "comment": "",
+      "command": "click",
+      "target": "css=#productCard_a_1_14220 .sc-bmzYkS:nth-child(2)",
+      "targets": [
+        ["css=#productCard_a_1_14220 .sc-bmzYkS:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='productCard_a_1_14220']/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/div/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ant Chair')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a04c4a7-772c-4281-84ec-3334e914ba1b",
+      "comment": "",
+      "command": "click",
+      "target": "id=product_add_to_cart_DR-CHRS-0002",
+      "targets": [
+        ["id=product_add_to_cart_DR-CHRS-0002", "id"],
+        ["css=#product_add_to_cart_DR-CHRS-0002", "css:finder"],
+        ["xpath=//button[@id='product_add_to_cart_DR-CHRS-0002']", "xpath:attributes"],
+        ["xpath=//div[@id='product-image-details_DR-CHRS-0002']/div/div/div[2]/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5466dcdc-4b0b-4737-8d0d-c481c474092a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiButton-root:nth-child(2)",
+      "targets": [
+        ["css=.MuiButton-root:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='HEADER_MINI_CART_Popper']/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e19613-b056-48b0-b0c9-d668bb267dde",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d40853ae-61c1-4e17-9a9f-d444d70548a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-jEACwC",
+      "targets": [
+        ["css=.sc-jEACwC", "css:finder"],
+        ["xpath=//div[@id='sectionone_sign-in-registration-page']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f20e2b2-4083-47bb-8149-5798fc6bd8a2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.bTsBft",
+      "targets": [
+        ["css=.bTsBft", "css:finder"],
+        ["xpath=//div[@id='sectionone_sign-in-registration-page']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign In & Checkout')]", "xpath:innerText"]
+      ],
+      "value": "Sign In & Checkout"
+    }, {
+      "id": "169754ea-83e5-4947-9694-d8e2aaa98031",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.expanded-menu-hover > .sc-eDPEul",
+      "targets": [
+        ["css=.expanded-menu-hover > .sc-eDPEul", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/header/div[2]/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dining Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "756e0c17-e281-4daa-8868-cde5aafc62b5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bc33c3bd-7e7a-4130-af76-7a83c2d3c889"]
+  }],
+  "urls": ["http://commerce-preview.sbx0187.play.hclsofy.com/"],
+  "plugins": []
+}

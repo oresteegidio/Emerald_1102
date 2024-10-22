@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?><rpt:ruleSet xmlns:rpt="rpt" genuid="10" version="7">
+  <arg:topLevelArgumentContainer xmlns:arg="arg:com.ibm.rational.test.lt.datacorrelation.rules"/>
+  <pass:full xmlns:pass="pass:com.ibm.rational.test.lt.datacorrelation.rules" uid="1" label="Accumulated Actions">
+    <rul:createReference xmlns:rul="rule:com.ibm.rational.test.lt.datacorrelation.rules" regexp="JSON:$.addressId" uid="2" occurrence="1">
+      <names>
+        <item>Content: addressId</item>
+      </names>
+      <attributes>
+        <item>resp_content</item>
+      </attributes>
+      <pass:linkReferencesWithSubstitutions uid="3">
+        <rul:findSubstitution uid="4">
+          <cnd:substitutionValue xmlns:cnd="condition:com.ibm.rational.test.lt.datacorrelation.rules" uid="5" value="%Content: addressId%"/>
+        </rul:findSubstitution>
+      </pass:linkReferencesWithSubstitutions>
+    </rul:createReference>
+  </pass:full>
+  <pass:full xmlns:pass="pass:com.ibm.rational.test.lt.datacorrelation.rules" uid="6" label="Accumulated Actions">
+    <rul:createReference xmlns:rul="rule:com.ibm.rational.test.lt.datacorrelation.rules" regexp="JSON:$.orderId" uid="7" occurrence="1">
+      <attributes>
+        <item>resp_content</item>
+      </attributes>
+      <names>
+        <item>Content: orderId</item>
+      </names>
+      <pass:linkReferencesWithSubstitutions uid="8">
+        <rul:createSubstitution regexp="%Content: orderId%" uid="9" encoded="true">
+          <attributes>
+            <item>req_uri</item>
+          </attributes>
+          <names>
+            <item>order</item>
+          </names>
+        </rul:createSubstitution>
+      </pass:linkReferencesWithSubstitutions>
+    </rul:createReference>
+  </pass:full>
+</rpt:ruleSet>

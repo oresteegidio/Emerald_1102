@@ -1,0 +1,157 @@
+name: Perf_Project
+version: 2
+projectReferences: 
+  - /Emerald-UI-Tests
+  - /Emerald_Perf
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Perf_Project/src
+        type: javaClasspath
+  - name: 20230122_Sched.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.2.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+User Group 1: Group Size 100.0 percent
+
+'
+      name: 20230122_Sched
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1EEB94271C59BA0C375E33030626134
+  - name: 20240125_Google.recdata
+  - name: 20240125_Google.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Perf_Project/20240125_Google.recdata
+        type: recsessionRecdata
+  - name: 20240125_Sched.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: 20240125_Sched
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EEBB8D80BDF6A0F52FE66136666133
+  - name: 20240422_BathSearch.recdata
+  - name: 20240422_BathSearch.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Perf_Project/20240422_BathSearch.recdata
+        type: recsessionRecdata
+  - name: 20240422_BathSearch.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF007FC01653B0EDD5B83130333934
+    dependencies: 
+      - path: /Perf_Project/20240422_BathSearch.recsession
+        type: testRecsession
+  - name: 20240422_BathUI.recdata
+  - name: 20240422_BathUI.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Perf_Project/20240422_BathUI.recdata
+        type: recsessionRecdata
+  - name: 20240422_BathUI.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF0087E5290370EDD5B83130333934
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bath_Search.testsuite
+        type: testOriginalTest
+      - path: /Perf_Project/20240422_BathUI.recsession
+        type: testRecsession
+  - name: AllTests_Google(2).testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: AllTests_Google(2)
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EEB6D0F7D94C10EE75B16531353134
+  - name: AllTests_Google.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: AllTests_Google
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EEB6AB86930930CDF5B53439386135
+  - name: AllTests_Split_Google.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: AllTests_Split_Google
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EEB6B9D00E30E0D71EE16264313631
+  - name: BuyBedAsGuest_Recxorded.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF0076E2B79E00EDD5B83130333934
+    dependencies: 
+      - path: /Emerald_Perf/BuyBedAsGuest.recsession
+        type: testRecsession
+  - name: DS_Emerald.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /Perf_Project/DS_Emerald.csv.metadata
+        type: datasetMetadata
+  - name: DS_Emerald.csv.metadata
+  - name: Perf_Bath_Search.recdata
+  - name: Perf_Bath_Search.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Perf_Project/Perf_Bath_Search.recdata
+        type: recsessionRecdata
+  - name: Perf_Bath_Search.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE9E4F6775EA50FCD5E43837623132
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bath_Search.testsuite
+        type: testOriginalTest
+      - path: /Perf_Project/Perf_Bath_Search.recsession
+        type: testRecsession
+  - name: SChed_test2.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.2.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+User Group 1: Group Size 100.0 percent
+
+'
+      name: SChed_test2
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1EEB6BA39D2C270D71EE16264313631
+  - name: Sched_Test_1701847522275.htm
+    type: com.ibm.rational.test.lt.html
+  - name: src
+    resources: 

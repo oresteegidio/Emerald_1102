@@ -1,0 +1,7 @@
+eclipsehome=C:\HCL\DevOpsTest
+plugins=C:\HCL\HCLIMShared\plugins
+workspace=C:\Progetti\EmeraldDemo
+project=UI_Project
+suite=JPetStore.testsuite
+exportlogmillis=false
+overwrite=false

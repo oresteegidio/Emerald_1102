@@ -1,0 +1,400 @@
+name: SAP
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /SAP/src
+        type: javaClasspath
+  - name: 20240809_Order.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+	Logon_923
+
+	VA01
+
+	VL01N
+
+	VL02N
+
+	VL02N_Picking
+
+'
+      name: 20240809_Order
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EF562502B379F0DA0FB26230316336
+    dependencies: 
+      - path: /SAP/Logon_923.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VA01.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VL01N.testsuite
+        type: scheduleInvokedTest
+  - name: CP_Test.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+	Test_Dataset
+
+	Test_Dataset_1
+
+'
+      name: CP_Test
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EE4588CB36D060ECDAB86330633966
+    dependencies: 
+      - path: /SAP/DS_Test.csv
+        type: scheduleDatapool
+      - path: /SAP/Test_Dataset.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/Test_Dataset_1.testsuite
+        type: scheduleInvokedTest
+  - name: 'Copy of Logon_923.testsuite'
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF24193EBE612BF819B03465646630
+    dependencies: 
+      - path: /SAP/Logon_923.recsession
+        type: testRecsession
+  - name: 'Copy of VL01N.testsuite'
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE343AFC459470CC04B56335343133
+    dependencies: 
+      - path: /SAP/DS_Order.csv
+        type: testDatapool
+      - path: /SAP/VL01N.recsession
+        type: testRecsession
+  - name: 'Copy of Va01.testsuite'
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF5FA10826645DE8B9E26332393339
+    dependencies: 
+      - path: /SAP/Va01.recsession
+        type: testRecsession
+  - name: DS_20240821_Test.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /SAP/DS_20240821_Test.csv.metadata
+        type: datasetMetadata
+  - name: DS_20240821_Test.csv.metadata
+  - name: DS_Order.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /SAP/DS_Order.csv.metadata
+        type: datasetMetadata
+  - name: DS_Order.csv.metadata
+  - name: DS_Test.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /SAP/DS_Test.csv.metadata
+        type: datasetMetadata
+  - name: DS_Test.csv.metadata
+  - name: Logon_923.recdata
+  - name: Logon_923.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/Logon_923.recdata
+        type: recsessionRecdata
+  - name: Logon_923.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE6CF0966B4F70E127E16638333564
+  - name: OrderToCash.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+	Logon_923
+
+	Va01
+
+	VL01N
+
+	VL02N
+
+	VL02N_Picking
+
+	VL02N_PostGoodIssue
+
+	VF01
+
+	VF02
+
+'
+      name: OrderToCash
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EE2BCCF0509640F411B16231373735
+    dependencies: 
+      - path: /SAP/Logon_923.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VF01.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VF02.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VL01N.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VL02N.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VL02N_Picking.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/VL02N_PostGoodIssue.testsuite
+        type: scheduleInvokedTest
+      - path: /SAP/Va01.testsuite
+        type: scheduleInvokedTest
+  - name: Process.recdata
+  - name: Process.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/Process.recdata
+        type: recsessionRecdata
+  - name: Process.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32DD7370AF30DD8BB33538346665
+    dependencies: 
+      - path: /SAP/Process.recsession
+        type: testRecsession
+  - name: Test_Dataset.recdata
+  - name: Test_Dataset.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/Test_Dataset.recdata
+        type: recsessionRecdata
+  - name: Test_Dataset.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE458CA2BE9100DF82B53264376539
+    dependencies: 
+      - path: /SAP/.classpath
+        type: testJavaClasspath
+      - path: /SAP/DS_Test.csv
+        type: testDatapool
+      - path: /SAP/Test_Dataset.recsession
+        type: testRecsession
+      - path: /SAP/src/Dataset/Class.java
+        type: testCustomCode
+  - name: Test_Dataset_1.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE6E8E1B303CD8C518B96139303633
+    dependencies: 
+      - path: /SAP/DS_Test.csv
+        type: testDatapool
+      - path: /SAP/Test_Dataset.recsession
+        type: testRecsession
+  - name: VA01.testsuite
+    missing: true
+  - name: VF01.recdata
+  - name: VF01.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VF01.recdata
+        type: recsessionRecdata
+  - name: VF01.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32DED590F700DD8BB33538346665
+    dependencies: 
+      - path: /SAP/VF01.recsession
+        type: testRecsession
+  - name: VF02.recdata
+  - name: VF02.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VF02.recdata
+        type: recsessionRecdata
+  - name: VF02.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32DF027DAAB0DD8BB33538346665
+    dependencies: 
+      - path: /SAP/VF02.recsession
+        type: testRecsession
+  - name: VL01N.recdata
+  - name: VL01N.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VL01N.recdata
+        type: recsessionRecdata
+  - name: VL01N.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32E62DA63C00DD8BB33538346665
+    dependencies: 
+      - path: /SAP/DS_Order.csv
+        type: testDatapool
+      - path: /SAP/VL01N.recsession
+        type: testRecsession
+  - name: VL01N_Picking.recdata
+  - name: VL01N_Picking.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VL01N_Picking.recdata
+        type: recsessionRecdata
+  - name: VL02N.recdata
+  - name: VL02N.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VL02N.recdata
+        type: recsessionRecdata
+  - name: VL02N.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32DE2A74F2E0DD8BB33538346665
+    dependencies: 
+      - path: /SAP/VL02N.recsession
+        type: testRecsession
+  - name: VL02N_Picking.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32EAED23B360DD8BB33538346665
+    dependencies: 
+      - path: /SAP/VL01N_Picking.recsession
+        type: testRecsession
+  - name: VL02N_PostGoodIssue.recdata
+  - name: VL02N_PostGoodIssue.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/VL02N_PostGoodIssue.recdata
+        type: recsessionRecdata
+  - name: VL02N_PostGoodIssue.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE32DEAEFF4EC0DD8BB33538346665
+    dependencies: 
+      - path: /SAP/VL02N_PostGoodIssue.recsession
+        type: testRecsession
+  - name: Va01.recdata
+  - name: Va01.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /SAP/Va01.recdata
+        type: recsessionRecdata
+  - name: Va01.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.sap'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF5F97CAE54C20E8B9E26332393339
+    dependencies: 
+      - path: /SAP/Va01.recsession
+        type: testRecsession
+  - name: bin
+    resources: 
+      - name: test
+        resources: 
+          - name: VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recdata
+          - name: VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/bin/test/VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recdata
+                type: recsessionRecdata
+          - name: VA01_Test_A1EF56381A7ECE50D39AB63834373164.recdata
+          - name: VA01_Test_A1EF56381A7ECE50D39AB63834373164.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/bin/test/VA01_Test_A1EF56381A7ECE50D39AB63834373164.recdata
+                type: recsessionRecdata
+          - name: VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recdata
+          - name: VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/bin/test/VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recdata
+                type: recsessionRecdata
+          - name: Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recdata
+          - name: Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/bin/test/Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recdata
+                type: recsessionRecdata
+          - name: Va01_Test_A1EF5F925D347E80E8B9E26332393339.recdata
+          - name: Va01_Test_A1EF5F925D347E80E8B9E26332393339.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/bin/test/Va01_Test_A1EF5F925D347E80E8B9E26332393339.recdata
+                type: recsessionRecdata
+  - name: src
+    resources: 
+      - name: Dataset
+        resources: 
+          - name: Class.java
+      - name: test
+        resources: 
+          - name: VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recdata
+          - name: VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/src/test/VA01_Test_A1EE32DDDB81EB70DD8BB33538346665.recdata
+                type: recsessionRecdata
+          - name: VA01_Test_A1EF56381A7ECE50D39AB63834373164.recdata
+          - name: VA01_Test_A1EF56381A7ECE50D39AB63834373164.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/src/test/VA01_Test_A1EF56381A7ECE50D39AB63834373164.recdata
+                type: recsessionRecdata
+          - name: VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recdata
+          - name: VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/src/test/VL02N_Picking_Test_A1EE32DE6F3A8A20DD8BB33538346665.recdata
+                type: recsessionRecdata
+          - name: Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recdata
+          - name: Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/src/test/Va01_Test_A1EE31FFD93D2A70E09DB66439613665.recdata
+                type: recsessionRecdata
+          - name: Va01_Test_A1EF5F925D347E80E8B9E26332393339.recdata
+          - name: Va01_Test_A1EF5F925D347E80E8B9E26332393339.recsession
+            type: com.ibm.rational.test.lt.recsession
+            dependencies: 
+              - path: /SAP/src/test/Va01_Test_A1EF5F925D347E80E8B9E26332393339.recdata
+                type: recsessionRecdata

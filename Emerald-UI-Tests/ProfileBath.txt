@@ -1,0 +1,7 @@
+eclipsehome=C:\HCL\DevOpsTest
+plugins=C:\HCL\HCLIMShared\plugins
+workspace=C:\Progetti\EmeraldDemo
+project=Emerald-UI-Tests
+suite=Bath_Search.testsuite
+exportlogmillis=false
+overwrite=false

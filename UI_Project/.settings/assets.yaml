@@ -1,0 +1,199 @@
+name: UI_Project
+version: 2
+projectReferences: 
+  - /DemoAPI
+  - /Emerald-UI-Tests
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /UI_Project/src
+        type: javaClasspath
+  - name: Amazon.recdata
+  - name: Amazon.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /UI_Project/Amazon.recdata
+        type: recsessionRecdata
+  - name: Amazon.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF11F829F04AF0FDB3B96637633832
+    dependencies: 
+      - path: /UI_Project/Amazon.recsession
+        type: testRecsession
+      - path: /UI_Project/_amazon_com_d2e.ma
+        type: test#moeb.applicationPackage
+  - name: DS_Users_1.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /UI_Project/DS_Users_1.csv.metadata
+        type: datasetMetadata
+  - name: DS_Users_1.csv.metadata
+  - name: DataFromDB.recdata
+  - name: DataFromDB.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /UI_Project/DataFromDB.recdata
+        type: recsessionRecdata
+  - name: DataFromDB.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF39E2AB7DB870F30CB13534376633
+    dependencies: 
+      - path: /Emerald-UI-Tests/hclsofy_com_727.ma
+        type: test#moeb.applicationPackage
+      - path: /UI_Project/DataFromDB.recsession
+        type: testRecsession
+  - name: ForDEmo.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+	DataFromDB
+
+'
+      name: ForDEmo
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EECFD9F53D4430EAC3E16636326164
+    dependencies: 
+      - path: /DemoAPI/Logical/MariaDB_Nation.icm/MariaDB_Nation_guest.tsq
+        type: scheduleInvokedTest
+      - path: /UI_Project/DataFromDB.testsuite
+        type: scheduleInvokedTest
+  - name: Google.recdata
+  - name: Google.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /UI_Project/Google.recdata
+        type: recsessionRecdata
+  - name: Google.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEBE8DDAB671C0D9E3B73235613032
+    dependencies: 
+      - path: /UI_Project/.classpath
+        type: testJavaClasspath
+      - path: /UI_Project/Google.recsession
+        type: testRecsession
+      - path: /UI_Project/_google_com_62a.ma
+        type: test#moeb.applicationPackage
+      - path: /UI_Project/src/customcode/Class.java
+        type: testCustomCode
+  - name: JPetStore.recdata
+  - name: JPetStore.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /UI_Project/JPetStore.recdata
+        type: recsessionRecdata
+  - name: JPetStore.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEE846DBAF5640E991B66434353462
+    dependencies: 
+      - path: /UI_Project/JPetStore.recsession
+        type: testRecsession
+      - path: /UI_Project/Web_localhost.ma
+        type: test#moeb.applicationPackage
+  - name: SearchEngine.recdata
+  - name: SearchEngine.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /UI_Project/SearchEngine.recdata
+        type: recsessionRecdata
+  - name: SearchEngine.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF4E626A1AD680D1D6E16263373263
+    dependencies: 
+      - path: /Emerald-UI-Tests/hclsofy_com_727.ma
+        type: test#moeb.applicationPackage
+      - path: /UI_Project/SearchEngine.recsession
+        type: testRecsession
+  - name: Web_localhost.ma
+    type: moeb.applicationPackage
+  - name: _amazon_com_d2e.ma
+    type: moeb.applicationPackage
+  - name: _google_com_62a.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_e74.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: customcode
+        resources: 
+          - name: Class.java
+  - name: yyyy.testsuite
+    missing: true
+  - name: yyyy_1726157613082.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1726157613082
+      tags: 
+      testId: A1EF7121D92C8E10EC97E23834303930
+      testName: yyyy
+    dependencies: 
+      - path: /UI_Project/yyyy_1726157613082.xmoebreport
+        type: statsSessionAsset
+      - path: /UI_Project/yyyy_1726157613082_orch!system.mstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157613082_orch!system.rstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157613082_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157613082_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157614582.executiondlr
+        type: statsSessionAsset
+  - name: yyyy_1726157613082.xmoebreport
+  - name: yyyy_1726157613082_orch!system.mstats
+  - name: yyyy_1726157613082_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: yyyy_1726157613082_perf!localhost.mstats
+  - name: yyyy_1726157613082_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: yyyy_1726157614582.executiondlr
+  - name: yyyy_1726157782572.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1726157782572
+      tags: 
+      testId: A1EF7121D92C8E10EC97E23834303930
+      testName: yyyy
+    dependencies: 
+      - path: /UI_Project/yyyy_1726157782572.xmoebreport
+        type: statsSessionAsset
+      - path: /UI_Project/yyyy_1726157782572_orch!system.mstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157782572_orch!system.rstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157782572_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157782572_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /UI_Project/yyyy_1726157785337.executiondlr
+        type: statsSessionAsset
+  - name: yyyy_1726157782572.xmoebreport
+  - name: yyyy_1726157782572_orch!system.mstats
+  - name: yyyy_1726157782572_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: yyyy_1726157782572_perf!localhost.mstats
+  - name: yyyy_1726157782572_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: yyyy_1726157785337.executiondlr

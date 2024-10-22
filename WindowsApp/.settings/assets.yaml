@@ -1,0 +1,83 @@
+name: WindowsApp
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /WindowsApp/src
+        type: javaClasspath
+  - name: Calculator.recdata
+  - name: Calculator.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WindowsApp/Calculator.recdata
+        type: recsessionRecdata
+  - name: PUTTY.recdata
+  - name: PUTTY.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WindowsApp/PUTTY.recdata
+        type: recsessionRecdata
+  - name: PUTTY.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE77DE5E8BCF50F653B03865303436
+    dependencies: 
+      - path: /WindowsApp/PUTTY.recsession
+        type: testRecsession
+      - path: /WindowsApp/Win_PUTTY_2a7.ma
+        type: test#moeb.applicationPackage
+  - name: ReadFileText.recdata
+  - name: ReadFileText.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WindowsApp/ReadFileText.recdata
+        type: recsessionRecdata
+  - name: ReadFileText.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE4C99596E1D40D4E7B63636656638
+    dependencies: 
+      - path: /WindowsApp/ReadFileText.recsession
+        type: testRecsession
+      - path: /WindowsApp/Win_notepad_57e.ma
+        type: test#moeb.applicationPackage
+  - name: Win_PUTTY_2a7.ma
+    type: moeb.applicationPackage
+  - name: Win_notepad_57e.ma
+    type: moeb.applicationPackage
+  - name: _calculator_523.ma
+    type: moeb.applicationPackage
+  - name: calculator(4).recdata
+  - name: calculator(4).recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WindowsApp/calculator(4).recdata
+        type: recsessionRecdata
+  - name: calculator.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE73DAD734CA90F95BB03562626532
+    dependencies: 
+      - path: /WindowsApp/_calculator_523.ma
+        type: test#moeb.applicationPackage
+      - path: /WindowsApp/calculator(4).recsession
+        type: testRecsession
+  - name: notepad.recdata
+  - name: notepad.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WindowsApp/notepad.recdata
+        type: recsessionRecdata
+  - name: src
+    resources: 

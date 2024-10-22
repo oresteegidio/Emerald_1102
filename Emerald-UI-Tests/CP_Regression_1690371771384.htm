@@ -1,0 +1,877 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Report del test funzionale</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+		body {font-family:Verdana; font-size : 0.8em; color : #5A605B; padding:0; margin:0; width:1024px;}
+		table {text-align:center; border-collapse: collapse; border: none; width: auto; font-size: 1.0em;}
+		.otable { width:1024px; border: 1px solid #ccc; font-size: 0.85em;}
+		.otd, th {border: 1px solid #ccc; text-align: left; vertical-align: top; padding-left:15px; padding-right:15px; padding-top:5px; padding-bottom:5px;}
+		td{border: none; text-align: left; vertical-align: top; padding-left:3px; padding-right:3px; padding-top:3px; padding-bottom:3px;}
+		th {color : white; background-color:#6699CC}
+		#page {margin:0 0 50px 20px;}
+		.pagesection {margin-left:30px;}
+		.subpagesection {margin-left:20px;}
+		h1 {text-align:center; font-size:2.4em;}
+		.h3 {text-decoration:underline;}
+		h4 {margin-bottom:5px; font-weight:normal; text-decoration:underline;}
+		.fail, .error {color:red; text-decoration:none;}
+		.inconclusive {color:orange; text-decoration:none;}
+		.pass {color:green; text-decoration:none;}
+		.fail-title, .error-title {color:red; text-decoration:none;}
+		.inconclusive-title {color:orange; text-decoration:none;}
+		.pass-title {color:green; text-decoration:none;}
+		.message {font-size:1.2em; font-weight:normal; font-family: Courier New, Courier, mono; color:#9C7C4F;}
+		ul {margin:0; padding:0;}
+		ul li {list-style-type:none;}
+		.vertgraph {width: 500px; height: 200px; position: relative; margin-bottom:15px; }
+		.vertgraph ul.bars {width: 349px; height: 160px; margin: 0; padding: 0; border-bottom: dotted 1px #BBBBBB; }
+		.vertgraph ul.bars li {position: absolute; width: 30px; height: 160px; bottom: 40px; padding: 0 !important; margin: 0 !important; text-align: center; color : #787878; line-height: 2.5em;}
+		.vertgraph ol {font-weight: bold; text-align:center;}
+		.vertgraph .bars li.pass{ left: 46px; background-position: 0px bottom !important; background-color:#A8FC00; }
+		.vertgraph .bars li.fail { left: 106px; background-position: -28px bottom !important; background-color:#FF7575;}
+		.vertgraph .bars li.error { left: 182px; background-position: -56px bottom !important; background-color:#FF0400;}
+		.vertgraph .bars li.inconclusive { left: 258px; background-position: -84px bottom !important; background-color:#FE9F00;}
+		.vertgraph .bars li span.barText {position: absolute; color:black; display: block; bottom:-30px;}
+		ul.graphLegend  {position:absolute; margin-left:370px; height:100px; top:50px; padding-left:20px;}
+		.legendText {color : #5A605B;}
+		.graph1 {float:left;}
+		.graph2 {float:left; }
+		</style>
+<script type="text/javascript">
+<!-- 
+		function hideThinkTimeRows(hide) {
+			var tdtable = document.getElementsByClassName('testdetailstable');
+			for ( i = 0; i < tdtable.length; i++ ) {
+				var color = 0;
+				var rows = tdtable[i].getElementsByTagName('tr');
+				for ( r = 0; r < rows.length; r++ )	{
+					if (rows[r].className == 'ttimerow' && hide == true) {
+						rows[r].style.display = 'none';
+					}
+					else {
+						rows[r].style.display = '';
+						color++;
+						if((color%2) == 0) {
+							rows[r].style.backgroundColor = '#EEEEFF';
+						}
+						else {
+							rows[r].style.backgroundColor = '#FFFFFF';
+						}
+					}
+				} 
+			}
+		}
+		
+		function posLeft() {  
+		    return typeof window.pageXOffset != 'undefined' ? window.pageXOffset :document.documentElement && document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ? document.body.scrollLeft : 0;  
+		}   
+		function posTop() {  
+		    return typeof window.pageYOffset != 'undefined' ?  window.pageYOffset : document.documentElement && document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;  
+		}  
+
+		function showPreview(e) {
+			var rect = e.getBoundingClientRect();
+	    	newHTML = '<img width="600" src="' + e.href + '" border="0">';
+			var divPreview = document.getElementById("div_preview");
+			if(divPreview){
+				divPreview.innerHTML = newHTML;
+				divPreview.style.top = rect.top + posTop();
+				divPreview.style.left = rect.left + rect.width + posLeft();
+				divPreview.style.display="block";
+			}
+	    }
+
+		function hidePreview() {
+			var divPreview = document.getElementById("div_preview");
+			if(divPreview){
+				divPreview.style.display="none";
+			}
+		}
+		
+		function fullTrace(linkObj, fullStringId) {
+			var linkname = linkObj.innerHTML;
+			if ( linkname == "..." ) {
+				document.getElementById(fullStringId).style.display = "inline";
+				linkObj.innerHTML = "&lt;&lt;&lt;";
+			} 
+			else {
+				document.getElementById(fullStringId).style.display = "none";
+				linkObj.innerHTML = "...";
+			}
+		}
+		 --></script>
+</head>
+<body>
+<h1>Report del test funzionale</h1>
+<div id="page">
+<h2></h2>
+<div class="pagesection">
+<TABLE>
+<tr>
+<td>Versione prodotto</td><td>:</td><td>9.5</td>
+</tr>
+<tr>
+<td>Ora di inizio</td><td>:</td><td>26 luglio 2023 13:42</td>
+</tr>
+<tr>
+<td>Ora di fine</td><td>:</td><td>26 luglio 2023 13:45</td>
+</tr>
+</TABLE>
+<br>
+<TABLE>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph1">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di test</ol>
+<!--2-->
+<li class="fail" style="height: 50px;">
+<span class="barText">1</span>
+</li>
+<li class="pass" style="height: 100px;">
+<span class="barText">2</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Numero totale di test</td><td>:</td><td>3</td>
+</tr>
+<tr>
+<td>Totale test riusciti</td><td>:</td><td>2</td>
+</tr>
+<tr>
+<td>Totale test non riusciti</td><td>:</td><td>1</td>
+</tr>
+</table>
+</td>
+</tr>
+</TABLE>
+<br>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph3">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di punti di verifica</ol>
+<!--4-->
+<li class="pass" style="height: 100px;">
+<span class="barText">4</span>
+</li>
+<li class="fail" style="height: 25px;">
+<span class="barText">1</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<TABLE>
+<tr>
+<td>Totale punti di verifica</td><td>:</td><td>3</td>
+</tr>
+<tr>
+<td>Punti di verifica riusciti</td><td>:</td><td>3</td>
+</tr>
+<tr>
+<td>Punti di verifica non riusciti</td><td>:</td><td>1</td>
+</tr>
+</TABLE>
+</td>
+</tr>
+</table>
+</div>
+<h2>Riepilogo test</h2>
+<div class="pagesection">
+<input type="checkbox" onclick="hideThinkTimeRows(this.checked);">Nascondi tempi di valutazione nei dettagli</input>
+<table class="otable">
+<tr>
+<th>Verdict</th><th>Nome test</th><th>Ora di inizio</th><th>Ora di fine</th>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td class="otd"><a href="#N65579" class="pass">Riuscito</a></td><td class="otd">Bath_Search</td><td class="otd">26 luglio 2023 13:42</td><td class="otd">26 luglio 2023 13:43</td>
+</tr>
+<tr>
+<td class="otd"><a href="#N65777" class="fail">Non riuscito</a></td><td class="otd">Dining_Search</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">26 luglio 2023 13:44</td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td class="otd"><a href="#N65962" class="pass">Riuscito</a></td><td class="otd">Bed_Buy_AsGuest</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">26 luglio 2023 13:45</td>
+</tr>
+</table>
+<div style="display: none; position: absolute; z-index: 10000; left: 0; top: 0;" id="div_preview"></div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="N65579">Test</a>:Bath_Search</span> (<span class="pass-title">Riuscito</span>)</h3>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph1">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di passo</ol>
+<!--14-->
+<li class="pass" style="height: 100px;">
+<span class="barText">14</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale passi di test</td><td>:</td><td>14</td>
+</tr>
+<tr>
+<td>Totale passi riusciti</td><td>:</td><td>14</td>
+</tr>
+<tr>
+<td>Totale passi non riusciti</td><td>:</td><td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph2">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di punti di verifica</ol>
+<!--1-->
+<li class="pass" style="height: 100px;">
+<span class="barText">1</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale punti di verifica</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica riusciti</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica non riusciti</td><td>:</td><td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h4>Dettagli passo</h4>
+<table class="testdetailstable">
+<tr>
+<th>Verdict</th><th>Nome passo</th><th>Data/ora</th><th>Schermo</th><th>Dettagli</th>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Start https://commerce-preview.sbx0010.play.hclsofy.com/Emerald</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.a9page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.a9page-image.png"></a></td><td class="otd">Measured response time: 1848 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Verify that Alt equals Store Logo on Image whose Source is /EmeraldSAS/images/type-icons/hcl-logo.svg</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b11page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b11page-image.png"></a></td><td class="otd">Actual value is '[alt: Store Logo]' Measured response time: 32 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Bath located at position 1</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b12page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b12page-image.png"></a></td><td class="otd">Measured response time: 31 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.622 ms</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Fixtures</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b15page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b15page-image.png"></a></td><td class="otd">Measured response time: 256 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 2.717 ms</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Division whose role is img located at position 1</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b18page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b18page-image.png"></a></td><td class="otd">Measured response time: 19 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 5.869 ms</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Add to Cart</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b21page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b21page-image.png"></a></td><td class="otd">Measured response time: 19 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 5.061 ms</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Checkout</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b24page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b24page-image.png"></a></td><td class="otd">Measured response time: 17 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 3.641 ms</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Heading H1 whose Content is Sign In &amp; Checkout</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b27page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b27page-image.png"></a></td><td class="otd">Measured response time: 16 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Close application window</td><td class="otd">26 luglio 2023 13:43</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+</table>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="N65777">Test</a>:Dining_Search</span> (<span class="fail-title">Non riuscito</span>)</h3>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph1">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di passo</ol>
+<!--12-->
+<li class="pass" style="height: 100px;">
+<span class="barText">12</span>
+</li>
+<li class="fail" style="height: 8.333333333333334px;">
+<span class="barText">1</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale passi di test</td><td>:</td><td>13</td>
+</tr>
+<tr>
+<td>Totale passi riusciti</td><td>:</td><td>12</td>
+</tr>
+<tr>
+<td>Totale passi non riusciti</td><td>:</td><td>1</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph2">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di punti di verifica</ol>
+<!--1-->
+<li class="pass" style="height: 100px;">
+<span class="barText">1</span>
+</li>
+<li class="fail" style="height: 100px;">
+<span class="barText">1</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale punti di verifica</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica riusciti</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica non riusciti</td><td>:</td><td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h4>Dettagli passo</h4>
+<table class="testdetailstable">
+<tr>
+<th>Verdict</th><th>Nome passo</th><th>Data/ora</th><th>Schermo</th><th>Dettagli</th>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Start https://commerce-preview.sbx0010.play.hclsofy.com/Emerald</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b39page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b39page-image.png"></a></td><td class="otd">Measured response time: 2144 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Verify that Xpath equals //div[@id='root']/div/div/div/header/div/div/div/div/div[2]/div/div/a/img on Image whose Alt is Store Logo</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b41page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b41page-image.png"></a></td><td class="otd">Actual value is '[xpath: //div[@id='root']/div/div/div/header/div/div/div/div/div[2]/div/div/a/img]' 
+Measured response time: 15 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Dining Room located at position 1</td><td class="otd">26 luglio 2023 13:43</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b42page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b42page-image.png"></a></td><td class="otd">Measured response time: 21 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 3.592 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Tables</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b45page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b45page-image.png"></a></td><td class="otd">Measured response time: 19 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.261 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Patio Table</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b48page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b48page-image.png"></a></td><td class="otd">Measured response time: 16 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 6.340 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Add to Cart</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b51page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b51page-image.png"></a></td><td class="otd">Object not found. Action performed on the most appropriate element. Measured response time: 0 millise
+conds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 7.500 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Checkout</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b54page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b54page-image.png"></a></td><td class="otd">Object not found. Action performed on the most appropriate element. Measured response time: 49 millis
+econds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="fail">Non riuscito</span></td><td class="otd">Verify that Content equals Sign In &amp; Checkout on Heading H1</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b56page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b56page-image.png"></a></td><td class="otd"><tt>
+<pre>Timeout occurred while looking for the object...
+</pre>
+</tt></td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Close application window</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+</table>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="N65962">Test</a>:Bed_Buy_AsGuest</span> (<span class="pass-title">Riuscito</span>)</h3>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph1">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di passo</ol>
+<!--48-->
+<li class="pass" style="height: 100px;">
+<span class="barText">48</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale passi di test</td><td>:</td><td>48</td>
+</tr>
+<tr>
+<td>Totale passi riusciti</td><td>:</td><td>48</td>
+</tr>
+<tr>
+<td>Totale passi non riusciti</td><td>:</td><td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<table class="otd">
+<tr>
+<td>
+<div class="graph2">
+<div class="vertgraph">
+<ul class="bars">
+<ol class="graphTitle">Verdict di punti di verifica</ol>
+<!--2-->
+<li class="pass" style="height: 100px;">
+<span class="barText">2</span>
+</li>
+</ul>
+<ul class="graphLegend">
+<li style="list-style-type:square; color:#A8FC00;">
+<span class="legendText">Riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FF7575;">
+<span class="legendText">Non riuscito</span>
+</li>
+<li style="list-style-type:square; color:#FE9F00;">
+<span class="legendText">Inconclusivo</span>
+</li>
+<li style="list-style-type:square; color:#FF0400;">
+<span class="legendText">Errore</span>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td><td>
+<table>
+<tr>
+<td>Totale punti di verifica</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica riusciti</td><td>:</td><td>1</td>
+</tr>
+<tr>
+<td>Punti di verifica non riusciti</td><td>:</td><td>0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h4>Dettagli passo</h4>
+<table class="testdetailstable">
+<tr>
+<th>Verdict</th><th>Nome passo</th><th>Data/ora</th><th>Schermo</th><th>Dettagli</th>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Start https://commerce-preview.sbx0010.play.hclsofy.com/Emerald</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b68page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b68page-image.png"></a></td><td class="otd">Measured response time: 2145 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Verify (with retry) that Alt equals Store Logo on Image whose Style is background-color:rgba(0, 0, 0, 0);background-repea...2, 116);visibility:visible;z-index:auto;</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b70page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b70page-image.png"></a></td><td class="otd">Object not found. Action performed on the most appropriate element. Actual value is '[alt: Store Logo
+]' Measured response time: 34 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Bedroom located at position 1</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b72page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b72page-image.png"></a></td><td class="otd">Measured response time: 16 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Beds</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b74page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b74page-image.png"></a></td><td class="otd">Measured response time: 12 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 3.664 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Sleepy Head Elegant Queen Bed</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b77page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b77page-image.png"></a></td><td class="otd">Measured response time: 20 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.370 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Add to Cart</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b80page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b80page-image.png"></a></td><td class="otd">Measured response time: 7 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 5.497 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Checkout</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b83page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b83page-image.png"></a></td><td class="otd">Measured response time: 146 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 3.811 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Checkout as a guest</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b86page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b86page-image.png"></a></td><td class="otd">Measured response time: 103 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.591 ms</td><td class="otd">26 luglio 2023 13:44</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Create a New Address</td><td class="otd">26 luglio 2023 13:44</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b89page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b89page-image.png"></a></td><td class="otd">Measured response time: 28 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 1.457 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Abitazione' in Edit text whose Label is Address Name&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b92page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b92page-image.png"></a></td><td class="otd">Measured response time: 18 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE" class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.855 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Mario' in Edit text whose Label is First name&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b95page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b95page-image.png"></a></td><td class="otd">Measured response time: 19 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Rossi' in Edit text whose Label is Last name&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.b97page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.b97page-image.png"></a></td><td class="otd">Measured response time: 0 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.424 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Via Roma 100' in Edit text whose Label is Address line 1&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c100page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c100page-image.png"></a></td><td class="otd">Measured response time: 15 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 567 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Milano' in Edit text whose Label is City&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c103page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c103page-image.png"></a></td><td class="otd">Measured response time: 0 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 408 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Italy' in Edit text whose Label is Country&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c106page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c106page-image.png"></a></td><td class="otd">Measured response time: 5 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 1.981 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'Lombardia' in Edit text whose Label is State / Province&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c109page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c109page-image.png"></a></td><td class="otd">Measured response time: 21 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 915 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value '20100' in Edit text whose Label is Zip / Postal code&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c112page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c112page-image.png"></a></td><td class="otd">Measured response time: 20 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 861 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Enter value 'mario.rossi@pio.com' in Email field whose Label is Email&thinsp;*</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c115page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c115page-image.png"></a></td><td class="otd">Measured response time: 16 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 8.892 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Save and select this address</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c118page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c118page-image.png"></a></td><td class="otd">Measured response time: 10 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 3.357 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Radio button whose Label is US - Regular Delivery</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c121page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c121page-image.png"></a></td><td class="otd">Measured response time: 10 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 13.737 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Continue to Payment</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c124page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c124page-image.png"></a></td><td class="otd">Measured response time: 78 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 2.181 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Radio button whose Label is Cash on delivery</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c127page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c127page-image.png"></a></td><td class="otd">Measured response time: 17 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.394 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Paragraph whose Content is Use This Address</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c130page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c130page-image.png"></a></td><td class="otd">Measured response time: 16 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 4.769 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Review Order</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c133page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c133page-image.png"></a></td><td class="otd">Measured response time: 20 milliseconds
+</td>
+</tr>
+<tr class="ttimerow">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Think 8.812 ms</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">Per execution preference, actual think time was 2.000 ms
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Click on Image button whose Content is Place Order</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c136page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c136page-image.png"></a></td><td class="otd">Measured response time: 0 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Verify that Content starts with Order # on Heading H6</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c138page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c138page-image.png"></a></td><td class="otd">Actual value is '[content: Order #161505063]' Measured response time: 14 milliseconds
+</td>
+</tr>
+<tr style="background-color:#EEEEEE">
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Variable 'OrderID' is set to 'Extract value using regex \d+' from property 'Content' of Heading H6</td><td class="otd">26 luglio 2023 13:45</td><td class="otd"><a href="CP_Regression_1690371771384_img/1.c139page-image.png" onmouseover="showPreview(this);" onmouseout="hidePreview();"><img width="150" src="CP_Regression_1690371771384_img/1.c139page-image.png"></a></td><td class="otd">Variable 'OrderID' set to '161505063' Measured response time: 17 milliseconds
+</td>
+</tr>
+<tr>
+<td class="otd"><span class="pass">Riuscito</span></td><td class="otd">Close application window</td><td class="otd">26 luglio 2023 13:45</td><td class="otd">-</td><td class="otd">-</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

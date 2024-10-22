@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" output="bin" path="src"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/RPTKHelpers.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/SapGuiController.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/IEDriverServer.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_arm64_chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/webuiplaybackextension-linux-jpm.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/webuiplaybackextension-windows-jpm.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_IEDriverServer.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/jar/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/httpcore-4.4.13.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/httpmime-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/IBM/IBMIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.2310.v20240607_1419/libraries/slf4j-simple-1.7.30.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

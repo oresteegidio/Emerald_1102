@@ -1,0 +1,500 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Report funzionale</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+  		
+  			body {
+				font-family:Verdana;
+				font-size : 0.8em;	
+				color : #5A605B;
+				padding:0;
+				margin:0;
+				width:1024px;
+			}
+
+			table {
+				text-align:center;	
+				width:1024px;
+				border-collapse: collapse;
+				border: 1px solid #ccc;
+				font-size: 0.85em;
+			}
+
+			td, th {
+				border: 1px solid #ccc;
+				text-align: left;
+				vertical-align: top;
+				padding-left:15px;
+				padding-right:15px;
+				padding-top:5px;
+				padding-bottom:5px;
+			}
+		
+			th {
+				color : white;
+				background-color:#6699CC
+			}
+
+			#page {
+				margin:0 0 50px 20px;	
+			}
+
+			.pagesection {
+				margin-left:30px;	
+			}
+			
+			
+			.subpagesection {
+				margin-left:20px;
+			}
+			
+			
+			h1 {
+				text-align:center;
+				font-size:2.4em;
+			}
+
+		
+			.h3 {
+				text-decoration:underline;
+			}
+			
+			verdict-title {
+				text-decoration:none;
+			}
+
+			h4 {
+				margin-bottom:5px;
+				font-weight:normal;
+				text-decoration:underline;
+			}
+
+			.fail, .error {	
+				color:red;	
+				text-decoration:none;
+			}
+			
+			
+			.inconclusive {
+				color:orange;
+				text-decoration:none;
+			}
+
+			.pass {
+				color:green;	
+				text-decoration:none;
+			}
+			
+			
+			.fail-title, .error-title {	
+				color:red;	
+				text-decoration:none;
+			}
+			
+			
+			.inconclusive-title {
+				color:orange;
+				text-decoration:none;
+			}
+
+			.pass-title {
+				color:green;	
+				text-decoration:none;
+			}
+			
+			
+
+			tr.VT {
+				background-color:#FFFF11;	
+			}
+
+			tr.CALL {
+				background-color:#FFFF88;	
+			}
+			
+			tr.CALL_BACK {
+				background-color:#FFFFAA;
+			}
+
+			tr.RETURN {
+				background-color:#FFFFCC;	
+			}
+
+			tr.VP {
+				background-color:#FFFFDD;	
+			}
+			
+
+			.message {
+				font-size:1.2em;
+				font-weight:normal;
+				font-family: Courier New, Courier, mono;
+				color:#9C7C4F;
+			}
+			
+			ul {
+				margin:0;
+				padding:0;
+			}
+			
+			ul li {
+				
+				list-style-type:none;
+			}
+  		
+  			.vertgraph {               
+	    width: 500px; 
+        height: 200px; 
+        position: relative; 
+        margin-bottom:15px;
+        
+    }
+    .vertgraph ul.bars { 
+        width: 349px; 
+        height: 160px; 
+        margin: 0; 
+        padding: 0; 
+        border-bottom: dotted 1px #BBBBBB;
+        
+    }
+    .vertgraph ul.bars li {  
+        position: absolute; 
+        width: 30px; 
+        height: 160px; 
+        bottom: 40px; 
+        padding: 0 !important; 
+        margin: 0 !important; 
+        text-align: center; 
+        color : #787878; 
+        line-height: 2.5em;
+    }
+    
+     .vertgraph ol {
+    	font-weight: bold;
+    	text-align:center;
+    }
+    
+
+    .vertgraph .bars li.pass{ left: 46px; background-position: 0px bottom !important; background-color:#A8FC00; }
+    .vertgraph .bars li.fail { left: 106px; background-position: -28px bottom !important; background-color:#FF7575;}
+    .vertgraph .bars li.error { left: 182px; background-position: -56px bottom !important; background-color:#FF0400;}
+    .vertgraph .bars li.inconclusive { left: 258px; background-position: -84px bottom !important; background-color:#FE9F00;}
+
+    
+    .vertgraph .bars li span.barText {
+    	position: absolute;
+    	color:black;
+    	display: block;
+		bottom:-30px;
+		
+
+    }
+    
+    
+ 	ul.graphLegend  {
+ 		position:absolute;
+ 		margin-left:370px;
+ 		height:100px;
+ 		top:50px;
+		padding-left:20px;
+ 	}
+    	
+ 	
+ 	.legendText {
+ 		color : #5A605B;
+ 	}
+ 	
+ 	.graph1 {
+		margin-right:45px;
+		margin-top:20px;
+ 		float:left;
+ 	}
+
+ 	.graph2 {
+ 		margin-top:20px;
+ 		float:left;
+
+ 	}
+  		</style>
+</head>
+<body>
+<h1>Report funzionale</h1>
+<div id="page">
+<h2>Riepilogo globale</h2>
+<div class="pagesection">
+<ul>
+<li>Versione prodotto:2023.12 (11.0.0)</li>
+<li>Ora di inizio:19 dicembre 2023 10:54</li>
+<li>Ora di fine:19 dicembre 2023 11:02</li>
+<li>Numero totale di test:21</li>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div class="graph1"></div>
+<div style="clear:both"></div>
+</div>
+<h2>Riepilogo test</h2>
+<div class="pagesection">
+<table>
+<tr>
+<th>Nome test</th><th>Ora di inizio</th><th>Ora di fine</th><th>Verdict</th>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BuyBedAsGuest</td><td>19 dicembre 2023 10:54</td><td>19 dicembre 2023 11:02</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>BuyBedAsGuest</td><td>19 dicembre 2023 10:54</td><td>19 dicembre 2023 10:57</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BuyBedAsGuest</td><td>19 dicembre 2023 10:57</td><td>19 dicembre 2023 10:59</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>BuyBedAsGuest</td><td>19 dicembre 2023 10:59</td><td>19 dicembre 2023 11:01</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BuyBedAsGuest</td><td>19 dicembre 2023 11:01</td><td>19 dicembre 2023 11:02</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:54</td><td>19 dicembre 2023 11:02</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>DiningSearch</td><td>19 dicembre 2023 10:54</td><td>19 dicembre 2023 11:02</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:54</td><td>19 dicembre 2023 10:55</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 10:55</td><td>19 dicembre 2023 10:55</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:55</td><td>19 dicembre 2023 10:56</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 10:56</td><td>19 dicembre 2023 10:57</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:57</td><td>19 dicembre 2023 10:57</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 10:57</td><td>19 dicembre 2023 10:58</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:58</td><td>19 dicembre 2023 10:58</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 10:58</td><td>19 dicembre 2023 10:59</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 10:59</td><td>19 dicembre 2023 10:59</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 10:59</td><td>19 dicembre 2023 11:00</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 11:00</td><td>19 dicembre 2023 11:00</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 11:00</td><td>19 dicembre 2023 11:01</td><td><a href="#" class=""></a></td>
+</tr>
+<tr>
+<td>DiningSearch</td><td>19 dicembre 2023 11:01</td><td>19 dicembre 2023 11:01</td><td><a href="#" class=""></a></td>
+</tr>
+<tr bgcolor="#EEEEFF">
+<td>BathSearch</td><td>19 dicembre 2023 11:01</td><td>19 dicembre 2023 11:02</td><td><a href="#" class=""></a></td>
+</tr>
+</table>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BuyBedAsGuest</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BuyBedAsGuest</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BuyBedAsGuest</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BuyBedAsGuest</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BuyBedAsGuest</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>DiningSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div class="subpagesection">
+<h3>
+<span class="h3"><a name="">Test:</a>BathSearch</span> (<span class="-title"></span>)</h3>
+<ul>
+<li>Numero totale di punti di verifica:0</li>
+<li>Numero totale di difetti:0</li>
+</ul>
+<div style="clear:both"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

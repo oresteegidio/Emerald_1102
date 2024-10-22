@@ -1,0 +1,7 @@
+eclipsehome=C:/HCL/HCLOneTest/
+plugins=C:\HCL\HCLIMShared\plugins
+workspace=C:/Progetti/EmeraldDemo
+project=Emerald-UI-Tests
+suite=Regression.testsuite
+exportlogmillis=false
+overwrite=false

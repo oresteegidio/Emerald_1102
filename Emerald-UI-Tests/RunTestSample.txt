@@ -1,0 +1,7 @@
+eclipsehome=C:\HCL\DevOpsTest
+plugins=C:\HCL\HCLIMShared\plugins
+workspace=C:\Progetti\EmeraldDemo
+project=Emerald-UI-Tests
+suite=Dining_Search.testsuite
+exportlogmillis=false
+overwrite=false

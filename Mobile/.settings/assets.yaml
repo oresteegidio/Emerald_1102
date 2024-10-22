@@ -1,0 +1,129 @@
+name: Mobile
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Mobile/src
+        type: javaClasspath
+  - name: 20240610_Coin.recdata
+  - name: 20240610_Coin.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/20240610_Coin.recdata
+        type: recsessionRecdata
+  - name: 99.recdata
+  - name: 99.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/99.recdata
+        type: recsessionRecdata
+  - name: 99.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF2708455F4D70D79DB93565623138
+    dependencies: 
+      - path: /Mobile/99.recsession
+        type: testRecsession
+      - path: /Mobile/AndC_2b0.ma
+        type: test#moeb.applicationPackage
+  - name: 999.recdata
+  - name: 999.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/999.recdata
+        type: recsessionRecdata
+  - name: 999.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF27089B3DB970D79DB93565623138
+    dependencies: 
+      - path: /Mobile/999.recsession
+        type: testRecsession
+      - path: /Mobile/AndC_2b0.ma
+        type: test#moeb.applicationPackage
+  - name: AndC_2b0.ma
+    type: moeb.applicationPackage
+  - name: CP_Mobile.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: CP_Mobile
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EC8B4838DDAA00FDF7B13561386261
+  - name: CoinMarket.recdata
+  - name: CoinMarket.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/CoinMarket.recdata
+        type: recsessionRecdata
+  - name: CoinMarketCap.recdata
+  - name: CoinMarketCap.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/CoinMarketCap.recdata
+        type: recsessionRecdata
+  - name: CoinMarketCap.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF24E93325CD30C5BAE53032356333
+    dependencies: 
+      - path: /Mobile/AndC_2b0.ma
+        type: test#moeb.applicationPackage
+      - path: /Mobile/CoinMarketCap.recsession
+        type: testRecsession
+  - name: Trenitalia.recdata
+  - name: Trenitalia.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/Trenitalia.recdata
+        type: recsessionRecdata
+  - name: Trenitalia.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE2C773F2EDBF0D992E46238326134
+    dependencies: 
+      - path: /Mobile/Trenitalia.recsession
+        type: testRecsession
+      - path: /Mobile/dTrenitalia_aaa.ma
+        type: test#moeb.applicationPackage
+  - name: Treno.recdata
+  - name: Treno.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Mobile/Treno.recdata
+        type: recsessionRecdata
+  - name: Treno.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF2305B94EE9E0F89EB26262373039
+    dependencies: 
+      - path: /Mobile/Treno.recsession
+        type: testRecsession
+      - path: /Mobile/dTrenitalia_aaa.ma
+        type: test#moeb.applicationPackage
+  - name: dTrenitalia_aaa.ma
+    type: moeb.applicationPackage
+  - name: dTrenitalia_dc6.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 

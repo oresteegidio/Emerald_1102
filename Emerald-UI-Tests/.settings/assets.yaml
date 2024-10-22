@@ -1,0 +1,366 @@
+name: Emerald-UI-Tests
+version: 2
+projectReferences: 
+  - /Emeral_API_GuestCheckout
+  - /RFT_Project
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Emerald-UI-Tests/src
+        type: javaClasspath
+  - name: Bath_Search.recdata
+  - name: Bath_Search.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bath_Search.recdata
+        type: recsessionRecdata
+  - name: Bath_Search.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE2B999B979FA0EF4FB43535623566
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bath_Search.recsession
+        type: testRecsession
+  - name: Bed_Buy_AsGuest.recdata
+  - name: Bed_Buy_AsGuest.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bed_Buy_AsGuest.recdata
+        type: recsessionRecdata
+  - name: Bed_Buy_AsGuest.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE2BA6728FB450EF4FB43535623566
+    dependencies: 
+      - path: /Emerald-UI-Tests/Bed_Buy_AsGuest.recsession
+        type: testRecsession
+  - name: CP_RFT.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: CP_RFT
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EE2F917D7FE080C462B63731356531
+    dependencies: 
+      - path: /RFT_Project/ClassicsCD.testsuite
+        type: scheduleInvokedTest
+  - name: CP_Regression.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+	Bath_Search
+
+	Dining_Search
+
+	Bed_Buy_AsGuest
+
+'
+      name: CP_Regression
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EE2BA92404DD30EF4FB43535623566
+    dependencies: 
+      - path: '/Emeral_API_GuestCheckout/Logical/EmeraldAPIs.scm/React Store.scm/GET Top Categories.opr/GET Top Categories.tsq'
+        type: scheduleInvokedTest
+      - path: /Emerald-UI-Tests/Bath_Search.testsuite
+        type: scheduleInvokedTest
+      - path: /Emerald-UI-Tests/Bed_Buy_AsGuest.testsuite
+        type: scheduleInvokedTest
+      - path: /Emerald-UI-Tests/Dining_Search.testsuite
+        type: scheduleInvokedTest
+  - name: CP_Regression_1690371771384.htm
+    type: com.ibm.rational.test.lt.html
+  - name: Chair_Selection_1.recdata
+  - name: Chair_Selection_1.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_1.recdata
+        type: recsessionRecdata
+  - name: Chair_Selection_Anchor.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE466822DC9BA4C2E8B83533323933
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_1.recsession
+        type: testRecsession
+      - path: /Emerald-UI-Tests/ng_instance_166.ma
+        type: test#moeb.applicationPackage
+  - name: Chair_Selection_DS.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE46673685D47DC2E8B83533323933
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_1.recsession
+        type: testRecsession
+      - path: /Emerald-UI-Tests/DS_Emerald.csv
+        type: testDatapool
+      - path: /Emerald-UI-Tests/ng_instance_166.ma
+        type: test#moeb.applicationPackage
+  - name: Chair_Selection_DS_1729590366572.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1729590366572
+      tags: 
+      testId: A1EE46673685D47DC2E8B83533323933
+      testName: Chair_Selection_DS
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_DS.testsuite
+        type: statsSessionTest
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590366572.xmoebreport
+        type: statsSessionAsset
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590366572_orch!system.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590366572_orch!system.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590366572_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590366572_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729590368480.executiondlr
+        type: statsSessionAsset
+  - name: Chair_Selection_DS_1729590366572.xmoebreport
+  - name: Chair_Selection_DS_1729590366572_orch!system.mstats
+  - name: Chair_Selection_DS_1729590366572_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_DS_1729590366572_perf!localhost.mstats
+  - name: Chair_Selection_DS_1729590366572_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_DS_1729590368480.executiondlr
+  - name: DS_Emerald.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /Emerald-UI-Tests/DS_Emerald.csv.metadata
+        type: datasetMetadata
+  - name: DS_Emerald.csv.metadata
+  - name: Dining_Search.recdata
+  - name: Dining_Search.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Dining_Search.recdata
+        type: recsessionRecdata
+  - name: Dining_Search.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE2BA8BC8866E0EF4FB43535623566
+    dependencies: 
+      - path: /Emerald-UI-Tests/Dining_Search.recsession
+        type: testRecsession
+      - path: /Emerald-UI-Tests/ng_instance_166.ma
+        type: test#moeb.applicationPackage
+  - name: Emerald
+    resources: 
+      - name: API_Test.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.2.0
+        properties: 
+          description: 'Test(s): 
+
+'
+          name: API_Test
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EC8E6947F5E3D0F5D8B46531386263
+      - name: 'Add Item to basket-add.recdata'
+      - name: 'Add Item to basket-add.recsession'
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: '/Emerald-UI-Tests/Emerald/Add Item to basket-add.recdata'
+            type: recsessionRecdata
+      - name: 'Add Item to basket.testsuite'
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EB8C1EE9D1A430CA78E46230646563
+        dependencies: 
+          - path: /Emerald-UI-Tests/hclsofy_com_c5b.ma
+            type: test#moeb.applicationPackage
+      - name: 'Checkout item.testsuite'
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EB8BFA15E0A1E0F2CDB53064376535
+        dependencies: 
+          - path: /Emerald-UI-Tests/hclsofy_com_727.ma
+            type: test#moeb.applicationPackage
+      - name: 'Login Add Item & Checkout.testsuite'
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.2.0
+        properties: 
+          description: 'Test(s): 
+
+	Login
+
+	Add Item to basket
+
+	Checkout item
+
+'
+          name: 'Login Add Item & Checkout'
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EB8BDE033D4640F2CDB53064376535
+        dependencies: 
+          - path: '/Emerald-UI-Tests/Emerald/Add Item to basket.testsuite'
+            type: scheduleInvokedTest
+          - path: '/Emerald-UI-Tests/Emerald/Checkout item.testsuite'
+            type: scheduleInvokedTest
+          - path: /Emerald-UI-Tests/Emerald/Login.testsuite
+            type: scheduleInvokedTest
+      - name: Login.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EB8C1EE9B54290CA78E46230646563
+        dependencies: 
+          - path: /Emerald-UI-Tests/Emerald/Users.csv
+            type: testDatapool
+          - path: /Emerald-UI-Tests/hclsofy_com_c5b.ma
+            type: test#moeb.applicationPackage
+      - name: 'Register User.testsuite'
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EB8C1EE9C4D2F0CA78E46230646563
+        dependencies: 
+          - path: /Emerald-UI-Tests/Emerald/Users.csv
+            type: testDatapool
+          - path: /Emerald-UI-Tests/hclsofy_com_727.ma
+            type: test#moeb.applicationPackage
+      - name: 'Register Users & Add Address.testsuite'
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.2.0
+        properties: 
+          description: 'Test(s): 
+
+	Register User
+
+'
+          name: 'Register Users & Add Address'
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EB8BEFD3DF1830F2CDB53064376535
+        dependencies: 
+          - path: '/Emerald-UI-Tests/Emerald/Register User.testsuite'
+            type: scheduleInvokedTest
+      - name: UI_BuyWithNoCheckinCustomCode-add.recdata
+      - name: UI_BuyWithNoCheckinCustomCode-add.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Emerald-UI-Tests/Emerald/UI_BuyWithNoCheckinCustomCode-add.recdata
+            type: recsessionRecdata
+      - name: UI_BuyWithNoCheckinCustomCode.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1ED5A8ECD91C0DCFE11B13631343339
+        dependencies: 
+          - path: /Emerald-UI-Tests/.classpath
+            type: testJavaClasspath
+          - path: /Emerald-UI-Tests/hclsofy_com_c5b.ma
+            type: test#moeb.applicationPackage
+          - path: /Emerald-UI-Tests/src/extractnumber/Class.java
+            type: testCustomCode
+      - name: Users.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /Emerald-UI-Tests/Emerald/Users.csv.metadata
+            type: datasetMetadata
+      - name: Users.csv.metadata
+      - name: Users_Set2.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /Emerald-UI-Tests/Emerald/Users_Set2.csv.metadata
+            type: datasetMetadata
+      - name: Users_Set2.csv.metadata
+  - name: Regression.testsuite
+    type: com.ibm.rational.test.lt.scenario
+    version: 11.0.2.0
+    properties: 
+      description: 'Test(s): 
+
+'
+      name: Regression
+      type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+      uid: A1EE888952C2A890C903E13431663733
+  - name: Sched_Test_1702979654267.htm
+    type: com.ibm.rational.test.lt.html
+  - name: SearchBath.recdata
+  - name: SearchBath.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/SearchBath.recdata
+        type: recsessionRecdata
+  - name: UI_CustomCode.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EC9480315E4A0FEFFAB63834653635
+    dependencies: 
+      - path: /Emerald-UI-Tests/.classpath
+        type: testJavaClasspath
+      - path: /Emerald-UI-Tests/hclsofy_com_727.ma
+        type: test#moeb.applicationPackage
+      - path: /Emerald-UI-Tests/src/extractnumber/Class.java
+        type: testCustomCode
+  - name: Web_BuyBedAsGuest.recdata
+  - name: Web_BuyBedAsGuest.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Web_BuyBedAsGuest.recdata
+        type: recsessionRecdata
+  - name: hclsofy_com_05d.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_0c6.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_1b4.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_285.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_3b9.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_727.ma
+    type: moeb.applicationPackage
+  - name: hclsofy_com_c5b.ma
+    type: moeb.applicationPackage
+  - name: localhost.location
+    type: com.ibm.rational.test.lt.location
+  - name: ng_instance_166.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: extractnumber
+        resources: 
+          - name: Class.java
+      - name: test
+        resources: 
+          - name: Chair_Selection_DS_Test_A1EE46673685D47DC2E8B83533323933.java
+            type: com.ibm.rational.test.lt.generatedCode

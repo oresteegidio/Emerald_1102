@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" output="bin" path="src"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/RPTKHelpers.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/SapGuiController.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/msedgedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_operadriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/chromedriver_2_27.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/chromedriver_2_29.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/chromedriver_2_34.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/geckodriver_0_15.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/geckodriver_0_18.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/geckodriver_0_21.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/IEDriverServer.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_chromedriver_2_27.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_chromedriver_2_29.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_chromedriver_2_34.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_geckodriver_0_15.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_geckodriver_0_18.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_geckodriver_0_21.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_chromedriver_2_27.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_chromedriver_2_29.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_chromedriver_2_34.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_geckodriver_0_15.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_geckodriver_0_18.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/linux_x64_geckodriver_0_21.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_chromedriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_chromedriver_2_27.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_chromedriver_2_29.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_chromedriver_2_34.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_geckodriver_0_15.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_geckodriver_0_18.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_geckodriver_0_21.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/webuiplaybackextension-linux-jpm.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/webuiplaybackextension-windows-jpm.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_geckodriver_0_15.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_geckodriver_0_18.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_geckodriver_0_21.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_geckodriver.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/x64_IEDriverServer.zip"/>
+	<classpathentry kind="lib" path="C:/Progetti/EmeraldDemo/zippedExtLibs/mac_arm64_chromedriver.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

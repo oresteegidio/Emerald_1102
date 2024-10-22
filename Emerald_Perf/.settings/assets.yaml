@@ -1,0 +1,139 @@
+name: Emerald_Perf
+version: 2
+projectReferences: 
+  - /Emerald-UI-Tests
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Emerald_Perf/src
+        type: javaClasspath
+  - name: 20230313_Buy.dcrules
+    type: com.ibm.rational.test.lt.dcrules
+    version: 8.2.1-7
+  - name: 20240422_VU.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.2.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+User Group 1: Group Size 100.0 percent
+
+'
+      name: 20240422_VU
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1EF0082FC582BC0EDD5B83130333934
+  - name: 20240627_DS.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /Emerald_Perf/20240627_DS.csv.metadata
+        type: datasetMetadata
+  - name: 20240627_DS.csv.metadata
+  - name: BathSearch.recdata
+  - name: BathSearch.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald_Perf/BathSearch.recdata
+        type: recsessionRecdata
+  - name: BathSearch.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEE146493F4E70D86EE56237353136
+    dependencies: 
+      - path: /Emerald_Perf/BathSearch.recsession
+        type: testRecsession
+  - name: BuyBedAsGuest.recdata
+  - name: BuyBedAsGuest.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald_Perf/BuyBedAsGuest.recdata
+        type: recsessionRecdata
+  - name: BuyBedAsGuest.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEE1371B788C40D86EE56237353136
+    dependencies: 
+      - path: /Emerald_Perf/BuyBedAsGuest.recsession
+        type: testRecsession
+  - name: DS_Demo.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /Emerald_Perf/DS_Demo.csv.metadata
+        type: datasetMetadata
+  - name: DS_Demo.csv.metadata
+  - name: DiningSearch.recdata
+  - name: DiningSearch.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald_Perf/DiningSearch.recdata
+        type: recsessionRecdata
+  - name: DiningSearch.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEE148DED797B0F11DE23139336464
+    dependencies: 
+      - path: /Emerald_Perf/DiningSearch.recsession
+        type: testRecsession
+  - name: PF_BuyBedAsGuest.recdata
+  - name: PF_BuyBedAsGuest.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald_Perf/PF_BuyBedAsGuest.recdata
+        type: recsessionRecdata
+  - name: PF_BuyBedAsGuest.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EEE13664D35880D86EE56237353136
+    dependencies: 
+      - path: /Emerald_Perf/PF_BuyBedAsGuest.recsession
+        type: testRecsession
+  - name: RuleChange.dcrules
+    type: com.ibm.rational.test.lt.dcrules
+    version: 8.2.1-7
+  - name: Sched_Test.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.2.0
+    properties: 
+      description: 'Stages:
+
+	users=5; duration=5 minutes
+
+	users=8; duration=5 minutes
+
+Search: Group Size 70.0 percent
+
+	Test(s): BathSearch,DiningSearch
+
+sell: Group Size 30.0 percent
+
+	Test(s): BuyBedAsGuest
+
+'
+      name: Sched_Test
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1EE2F98EC45DCC0C462B63731356531
+    dependencies: 
+      - path: /Emerald-UI-Tests/localhost.location
+        type: scheduleIPOTLocation
+      - path: /Emerald_Perf/BathSearch.testsuite
+        type: scheduleInvokedTest
+      - path: /Emerald_Perf/BuyBedAsGuest.testsuite
+        type: scheduleInvokedTest
+      - path: /Emerald_Perf/DiningSearch.testsuite
+        type: scheduleInvokedTest
+  - name: src
+    resources: 
