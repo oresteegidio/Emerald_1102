@@ -81,12 +81,60 @@ resources:
         type: scheduleInvokedTest
   - name: CP_Regression_1690371771384.htm
     type: com.ibm.rational.test.lt.html
+  - name: Chair_Selection.recdata
+  - name: Chair_Selection.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection.recdata
+        type: recsessionRecdata
+  - name: Chair_Selection.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EFCE73EE2C0D40CB64E66631366134
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection.recsession
+        type: testRecsession
+      - path: /Emerald-UI-Tests/ng_instance_166.ma
+        type: test#moeb.applicationPackage
   - name: Chair_Selection_1.recdata
   - name: Chair_Selection_1.recsession
     type: com.ibm.rational.test.lt.recsession
     dependencies: 
       - path: /Emerald-UI-Tests/Chair_Selection_1.recdata
         type: recsessionRecdata
+  - name: Chair_Selection_1736418371972.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1736418371972
+      tags: 
+      testId: A1EFCE73EE2C0D40CB64E66631366134
+      testName: Chair_Selection
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection.testsuite
+        type: statsSessionTest
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418371972.xmoebreport
+        type: statsSessionAsset
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418371972_orch!system.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418371972_orch!system.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418371972_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418371972_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_1736418373019.executiondlr
+        type: statsSessionAsset
+  - name: Chair_Selection_1736418371972.xmoebreport
+  - name: Chair_Selection_1736418371972_orch!system.mstats
+  - name: Chair_Selection_1736418371972_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_1736418371972_perf!localhost.mstats
+  - name: Chair_Selection_1736418371972_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_1736418373019.executiondlr
   - name: Chair_Selection_Anchor.testsuite
     type: com.ibm.rational.test.lt.test
     version: 11.0.2.0
@@ -99,6 +147,36 @@ resources:
         type: testRecsession
       - path: /Emerald-UI-Tests/ng_instance_166.ma
         type: test#moeb.applicationPackage
+  - name: Chair_Selection_Anchor_1729591212660.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1729591212660
+      tags: 
+      testId: A1EE466822DC9BA4C2E8B83533323933
+      testName: Chair_Selection_Anchor
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor.testsuite
+        type: statsSessionTest
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212660.xmoebreport
+        type: statsSessionAsset
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212660_orch!system.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212660_orch!system.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212660_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212660_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_Anchor_1729591212832.executiondlr
+        type: statsSessionAsset
+  - name: Chair_Selection_Anchor_1729591212660.xmoebreport
+  - name: Chair_Selection_Anchor_1729591212660_orch!system.mstats
+  - name: Chair_Selection_Anchor_1729591212660_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_Anchor_1729591212660_perf!localhost.mstats
+  - name: Chair_Selection_Anchor_1729591212660_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_Anchor_1729591212832.executiondlr
   - name: Chair_Selection_DS.testsuite
     type: com.ibm.rational.test.lt.test
     version: 11.0.2.0
@@ -143,6 +221,36 @@ resources:
   - name: Chair_Selection_DS_1729590366572_perf!localhost.rstats
     type: com.ibm.rational.test.lt.stats.raw
   - name: Chair_Selection_DS_1729590368480.executiondlr
+  - name: Chair_Selection_DS_1729591079055.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1729591079055
+      tags: 
+      testId: A1EE46673685D47DC2E8B83533323933
+      testName: Chair_Selection_DS
+    dependencies: 
+      - path: /Emerald-UI-Tests/Chair_Selection_DS.testsuite
+        type: statsSessionTest
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079055.xmoebreport
+        type: statsSessionAsset
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079055_orch!system.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079055_orch!system.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079055_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079055_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /Emerald-UI-Tests/Chair_Selection_DS_1729591079884.executiondlr
+        type: statsSessionAsset
+  - name: Chair_Selection_DS_1729591079055.xmoebreport
+  - name: Chair_Selection_DS_1729591079055_orch!system.mstats
+  - name: Chair_Selection_DS_1729591079055_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_DS_1729591079055_perf!localhost.mstats
+  - name: Chair_Selection_DS_1729591079055_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: Chair_Selection_DS_1729591079884.executiondlr
   - name: DS_Emerald.csv
     type: com.ibm.rational.test.lt.datapool
     dependencies: 
@@ -362,5 +470,9 @@ resources:
           - name: Class.java
       - name: test
         resources: 
+          - name: Chair_Selection_Anchor_Test_A1EE466822DC9BA4C2E8B83533323933.java
+            type: com.ibm.rational.test.lt.generatedCode
           - name: Chair_Selection_DS_Test_A1EE46673685D47DC2E8B83533323933.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Chair_Selection_Test_A1EFCE73EE2C0D40CB64E66631366134.java
             type: com.ibm.rational.test.lt.generatedCode

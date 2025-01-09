@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/results/ftwebreport/static/css/main.ad6096c5.chunk.css",
+    "main.js": "/results/ftwebreport/static/js/main.b26c046e.chunk.js",
+    "main.js.map": "/results/ftwebreport/static/js/main.b26c046e.chunk.js.map",
+    "runtime-main.js": "/results/ftwebreport/static/js/runtime-main.0c0c372e.js",
+    "runtime-main.js.map": "/results/ftwebreport/static/js/runtime-main.0c0c372e.js.map",
+    "static/css/2.bb277aac.chunk.css": "/results/ftwebreport/static/css/2.bb277aac.chunk.css",
+    "static/js/2.592f4dfd.chunk.js": "/results/ftwebreport/static/js/2.592f4dfd.chunk.js",
+    "static/js/2.592f4dfd.chunk.js.map": "/results/ftwebreport/static/js/2.592f4dfd.chunk.js.map",
+    "index.html": "/results/ftwebreport/index.html",
+    "static/css/2.bb277aac.chunk.css.map": "/results/ftwebreport/static/css/2.bb277aac.chunk.css.map",
+    "static/css/main.ad6096c5.chunk.css.map": "/results/ftwebreport/static/css/main.ad6096c5.chunk.css.map",
+    "static/js/2.592f4dfd.chunk.js.LICENSE.txt": "/results/ftwebreport/static/js/2.592f4dfd.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/results/ftwebreport/static/media/DevOps-logo.a60ef5fe.svg",
+    "static/media/chrome.png": "/results/ftwebreport/static/media/chrome.9ce3f663.png",
+    "static/media/primereact.min.css": "/results/ftwebreport/static/media/line.39c65dcc.gif",
+    "static/media/edge.png": "/results/ftwebreport/static/media/edge.234744f6.png",
+    "static/media/firefox.png": "/results/ftwebreport/static/media/firefox.c0b1b845.png",
+    "static/media/ie.png": "/results/ftwebreport/static/media/ie.45081dbb.png",
+    "static/media/info.png": "/results/ftwebreport/static/media/info.937a5cfa.png",
+    "static/media/linux.jpg": "/results/ftwebreport/static/media/linux.e07eabe0.jpg",
+    "static/media/mac_os_X.png": "/results/ftwebreport/static/media/mac_os_X.f0e58960.png",
+    "static/media/theme.css": "/results/ftwebreport/static/media/open-sans-v15-latin-regular.ec806460.woff2",
+    "static/media/opera.png": "/results/ftwebreport/static/media/opera.d6426e2b.png",
+    "static/media/primeicons.css": "/results/ftwebreport/static/media/primeicons.e61f3495.woff",
+    "static/media/redhat.jpg": "/results/ftwebreport/static/media/redhat.6145a17d.jpg",
+    "static/media/index.css": "/results/ftwebreport/static/media/roboto-latin-900italic.cb5ad999.woff2",
+    "static/media/safari.png": "/results/ftwebreport/static/media/safari.0a898254.png",
+    "static/media/ubuntu.png": "/results/ftwebreport/static/media/ubuntu.c9ecc927.png",
+    "static/media/windows10.jpg": "/results/ftwebreport/static/media/windows10.a1e32b06.jpg",
+    "static/media/windows7.jpg": "/results/ftwebreport/static/media/windows7.d78bd8c5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c0c372e.js",
+    "static/css/2.bb277aac.chunk.css",
+    "static/js/2.592f4dfd.chunk.js",
+    "static/css/main.ad6096c5.chunk.css",
+    "static/js/main.b26c046e.chunk.js"
+  ]
+}
