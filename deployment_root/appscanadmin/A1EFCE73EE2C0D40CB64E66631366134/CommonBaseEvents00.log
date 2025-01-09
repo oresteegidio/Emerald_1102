@@ -1,0 +1,334 @@
+<CommonBaseEvent creationTime="2025-01-09T10:26:18.504Z" globalInstanceId="A1EFCE742ADEAFE0DF91E26163333130" msg="RPXE0001W 1 users successfully added" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>4</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:22.878Z" msg="Unable to find an exact match for CDP version 131, so returning the closest version found: a no-op implementation" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>5</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>50</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>WARNING</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>900</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>org.openqa.selenium.devtools.CdpVersionFinder</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sourceClassName" type="string">
+		<values>org.openqa.selenium.devtools.CdpVersionFinder</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sourceMethodName" type="string">
+		<values>findNearestMatch</values>
+	</extendedDataElements>
+	<sourceComponentId component="Logging" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="Logger" componentType="Logging_Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:22.888Z" msg="Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.4` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you&apos;re using and the version number of the artifact is the same as Selenium&apos;s." severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>6</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>50</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>WARNING</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>900</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>org.openqa.selenium.chromium.ChromiumDriver</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sourceClassName" type="string">
+		<values>org.openqa.selenium.chromium.ChromiumDriver</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sourceMethodName" type="string">
+		<values>lambda$new$3</values>
+	</extendedDataElements>
+	<sourceComponentId component="Logging" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="Logger" componentType="Logging_Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.694Z" globalInstanceId="A1EFCE743A08ACF0DF91E26163333130" msg="RPXE0001W 7.7.300 Engine STOP reason Unknown" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>9</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.695Z" globalInstanceId="A1EFCE743A08D400DF91E26163333130" msg="RPXE0001W Problem Determination Log Statistics" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>10</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.695Z" globalInstanceId="A1EFCE743A08FB10DF91E26163333130" msg="RPXE0001W PDLog rejected=0" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>11</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.697Z" globalInstanceId="A1EFCE743A092220DF91E26163333130" msg="RPXE0001W BREW actions completed = 28" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>12</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.698Z" globalInstanceId="A1EFCE743A092221DF91E26163333130" msg="RPXE0001W BREW largest pool size = 10" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>13</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.698Z" globalInstanceId="A1EFCE743A097040DF91E26163333130" msg="RPXE0001W Engine STOP commencing worker finalizers" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>14</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:45.801Z" globalInstanceId="A1EFCE743A18D990DF91E26163333130" msg="RPXE0001W Engine STOP wait for finalizers done  completed=10 poolsize=10" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>15</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:48.113Z" globalInstanceId="A1EFCE743B79A210DF91E26163333130" msg="RPXE0001W Virtual User Stop Statistics" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>16</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:48.113Z" globalInstanceId="A1EFCE743B79A211DF91E26163333130" msg="RPXE0001W Stop reason Unknown:  1 users" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>17</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:48.113Z" globalInstanceId="A1EFCE743B79A212DF91E26163333130" msg="RPXE0001W    [DefaultUserGroup][000001] stopped at 29888" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>18</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
+<CommonBaseEvent creationTime="2025-01-09T10:26:56.649Z" globalInstanceId="A1EFCE7440901F90DF91E26163333130" msg="RPXE0001W *** Runner process finished normally ***   &lt;main&gt;" severity="50" version="1.0.1">
+	<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+		<children name="CommonBaseEventLogRecord:name" type="string">
+			<values>SEVERE</values>
+		</children>
+		<children name="CommonBaseEventLogRecord:value" type="int">
+			<values>1000</values>
+		</children>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+		<values>19</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+		<values>42</values>
+	</extendedDataElements>
+	<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+		<values>com.ibm.rational.test.lt.core.logging.PDExecutionLog</values>
+	</extendedDataElements>
+	<sourceComponentId application="DevOps Test Performance" component="Performance Test Type" componentIdType="Application" executionEnvironment="Java" location="192.168.68.112" locationType="IPV4" subComponent="com.ibm.rational.test.lt.kernel_6.1.0" componentType="Hyades Data Collection Engine Application"/>
+	<situation categoryName="ReportSituation">
+		<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+	</situation>
+</CommonBaseEvent>
